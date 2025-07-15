@@ -1,61 +1,67 @@
-# Registro de Alumnos
+# 📋 Registro de Alumnos
 
-Este proyecto es una pequeña aplicación web para registrar alumnos validando sus datos. Permite ingresar nombre, apellido, DNI, teléfono y correo electrónico, validando cada campo para asegurar que el formato sea correcto.
-
----
-
-## Funcionalidades
-
-- Validación de nombre y apellido para que contengan solo letras y espacios.
-- Validación del DNI para que contenga solo números y tenga entre 7 y 9 dígitos.
-- Validación del teléfono para que contenga solo números y tenga 10 o 11 dígitos.
-- Validación básica del formato de correo electrónico.
-- Muestra una lista actualizada de los alumnos registrados.
-- Mensajes de alerta cuando algún dato es inválido.
-- Confirmación visual al registrar un alumno exitosamente.
+Este proyecto es una pequeña aplicación web para registrar alumnos validando sus datos. Permite ingresar nombre, apellido, DNI, teléfono y correo electrónico, verificando cada campo para asegurar que el formato sea correcto y que no se repitan registros.
 
 ---
 
-## Tecnologías utilizadas
+## ✨ Funcionalidades
 
-- JavaScript ES6 con módulos (import/export)
-- HTML y DOM para interacción con el formulario y la lista
-- Validaciones con expresiones regulares (regex)
-
----
-
-## Cómo usar
-
-1. Abrir el archivo `index.html` en un navegador moderno que soporte módulos ES6.
-2. Completar el formulario con los datos del alumno.
-3. Al hacer clic en "Registrar", el sistema validará los datos.
-4. Si todo es correcto, el alumno se agregará a la lista visible debajo del formulario.
-5. En caso de error, se mostrará un mensaje indicando qué campo corregir.
+- ✅ Validación de nombre y apellido (solo letras y espacios).
+- ✅ Validación del DNI (permite puntos y requiere al menos 8 dígitos numéricos).
+- ✅ Validación del teléfono (solo números, debe tener 10 u 11 dígitos).
+- ✅ Validación básica del formato de correo electrónico.
+- ✅ Prevención de duplicados: no se permite registrar dos veces el mismo DNI, teléfono, email o combinación de nombre y apellido.
+- ✅ Visualización dinámica de los alumnos registrados.
+- ✅ Mensajes de alerta cuando algún dato es inválido.
+- ✅ Confirmación visual al registrar un alumno exitosamente.
 
 ---
 
-## Estructura del proyecto
+## 🛠️ Tecnologías utilizadas
 
-- `index.html`: archivo HTML con el formulario y lista.
-- `main.js`: script principal que maneja validaciones, eventos y muestra de datos.
-- `clases.js`: archivo que contiene la clase `Alumno`.
-- `README.md`: documentación del proyecto.
-
----
-
-## Mejoras futuras
-
-- Almacenar los datos en almacenamiento local (localStorage) para persistencia.
-- Agregar funcionalidad para editar y eliminar alumnos.
-- Mejorar interfaz con estilos CSS y mensajes más amigables.
-- Validar otros campos como dirección o fecha de nacimiento.
+- JavaScript ES6 (con módulos `import/export`)
+- HTML y manipulación del DOM
+- Expresiones regulares (RegEx) para validaciones
 
 ---
 
-## Autor
+## 🚀 Cómo usar
 
-Facundo Bohn - (https://github.com/FacundoBohn)
+1. Cloná este repositorio o descargá los archivos.
+2. Abrí el archivo `index.html` en un navegador moderno (que soporte módulos ES6).
+3. Completá el formulario con los datos del alumno.
+4. Hacé clic en **Registrar**.
+5. Si los datos son válidos, el alumno se mostrará en la lista.
+6. Si hay errores o duplicados, se mostrará un mensaje con el motivo.
 
 ---
 
-¡Gracias por revisar este proyecto! Cualquier sugerencia o aporte es bienvenido.
+## 📁 Estructura del proyecto
+
+```
+📦 proyecto-registro-alumnos
+├── index.html       # Interfaz web con formulario y lista
+├── main.js          # Lógica principal y validaciones
+├── clases.js        # Clase Alumno exportada como módulo
+└── README.md        # Este archivo
+```
+
+---
+
+## 💡 Mejoras futuras
+
+- 💾 Guardar datos en `localStorage` para persistencia.
+- ✏️ Agregar funciones para editar y eliminar alumnos.
+- 🎨 Mejorar la interfaz con CSS y estilos personalizados.
+- 📆 Incluir más campos como dirección o fecha de nacimiento.
+
+---
+
+## 👨‍💻 Autor
+
+**Facundo Bohn**  
+🔗 [https://github.com/FacundoBohn](https://github.com/FacundoBohn)
+
+---
+
+> ¡Gracias por revisar este proyecto! Cualquier sugerencia o aporte es bienvenido 🙌
