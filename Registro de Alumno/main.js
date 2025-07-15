@@ -12,9 +12,17 @@ function validarNombre(nombre) {
 
 // --- Función que valida que el DNI tenga solo números y entre 7 y 9 dígitos ---
 function validarDNI(dni) {
-  const soloNumeros = /^[0-9]+$/;
-  return soloNumeros.test(dni) && dni.length >= 7 && dni.length <= 9;
+  // Acepta solo números y puntos
+  const formatoValido = /^[0-9.]+$/;
+  if (!formatoValido.test(dni)) return false;
+
+  // Elimina los puntos para contar solo los números
+  const numerosSinPuntos = dni.replace(/\./g, '');
+
+  // Debe tener al menos 8 dígitos numéricos
+  return numerosSinPuntos.length >= 8;
 }
+
 
 // --- Función que valida que el teléfono tenga solo números y tenga 10 o 11 dígitos ---
 function validarTelefono(telefono) {
@@ -92,3 +100,5 @@ document.getElementById("form-alumno").addEventListener("submit", function (e) {
   // Muestra un mensaje de confirmación al usuario
   alert(`Alumno registrado exitosamente: ${nombre} ${apellido}, DNI ${dni}, Email: ${email}`);
 });
+
+window.guardarAlumnos = guardarAlumnos;
